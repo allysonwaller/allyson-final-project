@@ -6,8 +6,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
-    <h1></h1>
+    <div class="col-sm-12 left-rail">
+    <h1>About</h1>
     <p class="author">By Marie Christine Taylor
       <p> Queen were one of the longest-lasting and most commercially successful bands to emerge from the British heavy rock scene of the early 1970s, but unlike their contemporaries such as Led Zeppelin, Deep Purple and Black Sabbath, they soon became just as popular with pop fans as fans of hard rock and heavy metal, beginning with "Killer Queen" from their third album "Sheer Heart Attack" in 1974.
 
@@ -16,11 +16,21 @@
       Queen's first album "Queen" was a commercial flop in 1973, failing to chart and producing no hit single, but their second album "Queen II" produced a top ten hit, "Seven Seas of Rhye". It was with the release of "Sheer Heart Attack" in 1974 and "A Night at the Opera" the following year that the band gained international success. They have released fifteen studio albums, five live albums and numerous compilation albums. Since Mercury's death and Deacon's retirement, May and Taylor have performed infrequently together at special events and programs as members of other ensembles. Between 2004 to 2009 the duo collaborated with Paul Rodgers under the moniker Queen + Paul Rodgers, and between 2011 to 2015 with Adam Lambert under the moniker Queen + Adam Lambert. </p>
 
       <p> Source: IMBD </p>
-    </div>
   </div>
-  <div class="row">
-    <div class="col">
     </div>
+</div>
+<section>
+  {% for member in data.members %}
+  <div class="card-deck">
+    <div class="card sm-dark text-white">
+      <img src="../img/members/{{ member.imagebw }}" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">{{ member.name }}</h5>
+      </div>
+    </div>
+  </div> 
   </div>
 </div>
+
+{% endfor %}
 {% endblock %}
