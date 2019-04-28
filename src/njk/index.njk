@@ -24,7 +24,7 @@
 <div class="row">
   {% for member in data.members %}
     <div class="card sm-dark text-white w-25">
-      <img src="../img/members/{{ member.imagebw }}" class="card-img" alt="...">
+      <img src="..img/members/{{ member.imagebw }}" class="card-img" alt="...">
       <div class="card-img-overlay">
         <h5 class="card-title">{{ member.name }}</h5>
           <a href="{{ member.url }}" class="btn btn-outline-light float-right">More Info</a>
@@ -36,7 +36,7 @@
 {% for discs in data.discography %}
 <ul class="list-unstyled col-sm-6">
   <li class="media">
-    <img class="mr-3" src="../img/discs/{{ discs.image }}" alt="Generic placeholder image">
+    <img class="mr-3" src="..img/discs/{{ discs.image }}" alt="Generic placeholder image">
     <div class="media-body">
       <h5 class="mt-0 mb-1">{{ discs.title }}</h5>
       {{ discs.year }}
