@@ -5,17 +5,17 @@
   <div class="row">
     <div class="col-sm-7 left-rail">
       {% block info %}
-      <h1>{{ members.name }}</h1>
+      <h1>{{ members.name}}</h1>
       <h2>{{ members.instruments }}</h2>
       <h3>{{ members.birthdate }}</h3> 
       <h4>{{ members.birthplace }}</h4>
 
-      <p>{{ members.text}}</p>
+      <p>{{ members.text | safe}}</p>
       {% endblock %}
     </div>
     <div class="col-sm-5">
       {% block story %}
-      <img src="../img/discs/{{ discs.image }}">
+      <img src="../img/members/{{ members.image }}" class= "img-fluid">
       {% endblock %}
     </div>
   </div>
