@@ -7,7 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 left-rail">
-    <h1>About</h1>
+    <h1 class="headline">About</h1>
     <p class="author">By Marie Christine Taylor
       <p> Queen were one of the longest-lasting and most commercially successful bands to emerge from the British heavy rock scene of the early 1970s, but unlike their contemporaries such as Led Zeppelin, Deep Purple and Black Sabbath, they soon became just as popular with pop fans as fans of hard rock and heavy metal, beginning with "Killer Queen" from their third album "Sheer Heart Attack" in 1974.
 
@@ -23,8 +23,8 @@
 
 <div class="row">
   {% for member in data.members %}
-    <div class="card sm-dark text-white col-6 offset-sm offset-md offset-lg">
-      <img src="img/members/{{ member.imagebw }}" class="card-img" alt="...">
+    <div class="card text-white col-sm-6">
+      <img src="img/members/{{ member.imagebw }}" class="img-fluid" alt="...">
       <div class="card-img-overlay">
         <h5 class="card-title">{{ member.name }}</h5>
           <a href="{{ member.url }}" class="btn btn-outline-light float-right">More Info</a>
@@ -38,7 +38,7 @@
   <li class="media">
     <img class="mr-3" src="img/discs/{{ discs.image }}" alt="Generic placeholder image">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">{{ discs.title }}</h5>
+      <h5 class="title">{{ discs.title }}</h5>
       {{ discs.year }}
     </div>
   </li>
